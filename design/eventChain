@@ -1,0 +1,16 @@
+-You open your eyes.
+-"Look around". You are on the beach. A forest ahead of you. You cant remember how you got here.
+
+-"Explore beach"
+ "Explore forest"
+
+
+-"Go left on the beach".
+ "Go right on the beach".
+    - Random. You come across a dead person. Looks like he was trying to make something with some TWIGS and GRASS. You dont seem to find any grass growing nearby.
+        -"Pickup all his stuff". 'This doesnt feel right'
+    - Random. You come across meadow. There is a lot of GRASS. Some cows, sheep are grazing.
+ "Go inside a forest".
+    - Random. Come across a buch of berry bushes.
+    - Random. Find some twigs lying around.
+-"Go back to beach". Get option to gather stuff.

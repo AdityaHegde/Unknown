@@ -1,0 +1,25 @@
+* World, has the entire knowledge of world, for now only the portion of the island available. Will be the entire island and the globe later on.
+  Create a unit entity. The unit entity "interacts" with other entities.
+
+* Game States, defines the state of the world. Adds features on new states (Able to controll a player, the island or multiple islands).
+
+* Entities, any object withing the game.
+    1. Unit, the person being controlled, animals etc
+    2. Item, non animated items.
+    3. Building, an immovable entity
+    4. Plot, specialised area to build Buildings on which add modifiers to buildings. Some buildings have to be built on specific plots.
+    5. Area, Forest and Beach
+    6. Container, Can have entities which dont contribute to the parent's attributes/behaviours
+
+* Behaviours, adds behaviours or attributes to entities. Are stateless ie no instance has to be created
+    1. Movable, Enables movement
+    3. Gatherable, Enables gathering Items from Entities.
+    4. Perishable, Defines no of "gathers" after which the entity will be removed
+
+* Attributes, defines certain attributes of the entity.
+    1. Primary attributes like energy, hunger, health
+    2. Other attributes like shell life etc.
+
+* Operations, an Entity intercts with another Entity.
+* Actions, change the game (world, game state, other entities etc)
+* Events, set of actions that will be taken once/periodic.

@@ -1,0 +1,65 @@
+{
+  "name": "unknown",
+  "description" : "The Unknown",
+  "version": "1.0.0",
+  "author": "Aditya Hegde",
+  "main" : "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/AdityaHegde/unknown"
+  },
+  "keywords" : [
+    "nodejs",
+    "emberjs",
+    "bootstrap",
+    "passport",
+    "express",
+    "dota"
+  ],
+  "engines": {
+    "node": "0.10.x",
+    "npm" : ">= 1.0.0"
+  },
+  "dependencies": {
+    "mongodb" : "*",
+    "mongoose" : "*",
+    "express" : "*",
+    "socket.io" : "*",
+    "body-parser" : "*",
+    "cookie-parser" : "*",
+    "express-session" : "*",
+    "method-override" : "*",
+    "connect-flash" : "*",
+    "bcrypt-nodejs" : "*",
+    "morgan" : "*",
+    "passport" : "*",
+    "passport-local" : "*",
+    "passport-google" : "*",
+    "passport-google-oauth" : "*",
+    "passport-facebook" : "*",
+    "passport-twitter" : "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat" : "*",
+    "grunt-ember-templates" : "*",
+    "grunt-contrib-yuidoc": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-concurrent": "*",
+    "grunt-qunit-istanbul": "*",
+    "grunt-contrib-clean": "*",
+    "load-grunt-config": "*",
+    "time-grunt": "*"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "licence" : "MIT",
+  "bugs" : {
+    "url" : "https://github.com/AdityaHegde/unknown/issues"
+  }
+}
