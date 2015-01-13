@@ -14,6 +14,7 @@ var Entity = Ember.Object.extend({
     this.set("behaviors", this.get("behaviors") || []);
     this.set("attributes", this.get("attributes") || []);
     this.set("availableOperations", this.get("availableOperations") || []);
+    this.set("childEntityIds", this.get("childEntityIds") || []);
   },
 
   id : "",
@@ -49,11 +50,13 @@ var Entity = Ember.Object.extend({
 
   operations : Utils.hasMany(Operations.OperationList, "type", "base", Operations.OperationRegistry, "id"),
 
-  behaviors : Utils.hasMany(Behaviors.BehaviorList, "type", "base", Behaviors.BehaviorRegistry, "id"),
+  behaviors  : Utils.hasMany(Behaviors.BehaviorList, "type", "base", Behaviors.BehaviorRegistry, "id"),
 
   attributes : Utils.hasMany(Attributes.AttributeList, "type", "base", Attributes.AttributeRegistry, "id"),
 
   recipe : Utils.hasMany(),
+
+  childEntityIds : null,
 });
 
 return {

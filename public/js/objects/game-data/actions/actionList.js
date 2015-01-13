@@ -7,6 +7,9 @@ define([
   "./addEntityInstance",
   "./removeEntityInstance",
   "./groupOfActions",
+  "./changeAttributeValue",
+  "./addBehavior",
+  "./removeBehavior",
 ], function() {
   var ActionList = Ember.Namespace.create();
   for(var i = 0; i < arguments.length; i++) {

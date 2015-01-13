@@ -5,7 +5,9 @@ define([
 var Attribute = Ember.Object.extend({
   id : "",
   class : "base",
-  value : "",
+  baseValue : 0,
+  maxValue  : 0,
+  isPercentage : false,
 });
 
 return {

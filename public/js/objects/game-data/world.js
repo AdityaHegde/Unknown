@@ -23,8 +23,8 @@ World = Ember.Object.extend({
     var
     entities = this.get("entities"),
     player = Entities.createEntityInstance(game, entities.findBy("id", "U0")),
+    village = Entities.createEntityInstance(game, entities.findBy("id", "V0")),
     areas = [];
-    player.addEntityInstance(Entities.createEntityInstance(game, entities.findBy("id", "INV_PLAYER")));
 
     this.set("player", player);
 
@@ -53,13 +53,15 @@ World = Ember.Object.extend({
           childEntityId : "INV_PLAYER",
         }));
         for(var i = 0; i < recipe.length; i++) {
-          actions.pushObject(Actions.createAction({
-            id : "CARM_" + recipe[i].get("id"),
-            type : "removeEntityInstance",
-            entityId : recipe[i].get("id"),
-            entityQty : recipe[i].get("qty"),
-            childEntityId : "INV_PLAYER",
-          }));
+          if(!recipe[i].notConsumed) {
+            actions.pushObject(Actions.createAction({
+              id : "CARM_" + recipe[i].get("id"),
+              type : "removeEntityInstance",
+              entityId : recipe[i].get("id"),
+              entityQty : recipe[i].get("qty"),
+              childEntityId : "INV_PLAYER",
+            }));
+          }
           checks.push({
             id : recipe[i].get("id"),
             qty : recipe[i].get("qty"),

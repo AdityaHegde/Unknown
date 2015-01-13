@@ -15,9 +15,10 @@ var RemoveEntityInstance = Action.base.extend({
     entityQty = this.get("entityQty"),
     removeFromEntity = this.get("removeFromSrc") ? entitySrc : entityTar,
     childEntityId = this.get("childEntityId"),
+    entitiesMeta = removeFromEntity.get("entitiesMeta"),
     instance = Entities.createEntityInstance(game, Entities.EntityRegistry[entityId]);
     instance.set("qty", entityQty);
-    removeFromEntity = childEntityId ? removeFromEntity.get("childEntities").findBy("entity.id", childEntityId) : removeFromEntity;
+    removeFromEntity = childEntityId ? entitiesMeta.entitiesById[childEntityId][0] : removeFromEntity;
     removeFromEntity.removeEntityInstance(instance);
     return true;
   },

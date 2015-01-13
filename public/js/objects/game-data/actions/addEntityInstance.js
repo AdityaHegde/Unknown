@@ -14,10 +14,11 @@ var AddEntityInstance = Action.base.extend({
     entityId = this.get("entityId"),
     entityQty = this.get("entityQty"),
     addToEntity = this.get("addToSrc") ? entitySrc : entityTar,
+    entitiesMeta = addToEntity.get("entitiesMeta"),
     childEntityId = this.get("childEntityId"),
     instance = Entities.createEntityInstance(game, Entities.EntityRegistry[entityId]);
     instance.set("qty", entityQty);
-    addToEntity = childEntityId ? addToEntity.get("childEntities").findBy("entity.id", childEntityId) : addToEntity;
+    addToEntity = childEntityId ? entitiesMeta.entitiesById[childEntityId][0] : addToEntity;
     addToEntity.addEntityInstance(instance);
     return true;
   },
